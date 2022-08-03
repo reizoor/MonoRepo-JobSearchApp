@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'training-root',
@@ -6,10 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  items: string[] = [];
-  
-  addTodoToList(todo: string){
-    this.items.push(todo);
-  }
-  
+  title = 'jobs';
 }

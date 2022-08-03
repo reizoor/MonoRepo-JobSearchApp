@@ -1,0 +1,12 @@
+.aboutus-container{
+    padding-left: 5%;
+    
+}
+.aboutus-container p{
+    font-size: x-large;
+    padding-bottom: 5%;
+}
+
+.aboutus-container strong{
+    color: rgb(7, 159, 219);
+}

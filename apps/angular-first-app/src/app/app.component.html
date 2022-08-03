@@ -1,1 +1,8 @@
-<training-nx-welcome></training-nx-welcome>
+<!-- <training-nx-welcome></training-nx-welcome> -->
+<training-header></training-header>
+<router-outlet></router-outlet>
+<ul>
+    <li *ngFor="let item of items">{{item}}</li>
+</ul>
+<training-todo (todoEvent)="addTodoToList($event)"></training-todo>
+<training-footer></training-footer>
