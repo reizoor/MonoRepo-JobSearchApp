@@ -1,4 +1,9 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import {ActivatedRoute, ParamMap} from '@angular/router';
+import { Observable, switchMap} from 'rxjs';
+import { Job } from '../../model/job';
+import { JobService } from '../../services/job.service';
+
 
 @Component({
   selector: 'training-jobs-details',
@@ -6,9 +11,20 @@ import { Component, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./jobs-details.component.css'],
 })
 export class JobsDetailsComponent implements OnInit {
-  constructor() {}
-  @Input() jobDescription: string = '';
-  @Input() jobCompany: string = '';
+  constructor(
+    private route: ActivatedRoute,
+    private service: JobService
+    ) {}
+  @Input() jobDescription = '';
+  @Input() jobCompany = '';
+
+  job$: Observable<any>;
     
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.job$ = this.route.paramMap.pipe(
+      switchMap((params: ParamMap) =>
+        this.service.getJob(Number(params.get('id'))))
+    );
+    
+  }
 }

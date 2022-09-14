@@ -41,5 +41,5 @@ Thumbs.db
 .angular
 
 # Ignore angular-first-app
-/apps/angular-first-app
-/apps/angular-first-app-e2e
+apps/angular-first-app
+apps/angular-first-app-e2e

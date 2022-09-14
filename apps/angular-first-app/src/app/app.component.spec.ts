@@ -1,12 +1,19 @@
-import { TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { NxWelcomeComponent } from './nx-welcome.component';
 
 describe('AppComponent', () => {
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AppComponent, NxWelcomeComponent],
     }).compileComponents();
+    fixture = TestBed.createComponent(AppComponent);
+
+    component = fixture.componentInstance;
+
+    fixture.detectChanges();
   });
 
   it('should create the app', () => {
@@ -29,4 +36,16 @@ describe('AppComponent', () => {
       'Welcome angular-first-app'
     );
   });
+  describe('AppComponent methods',()=>{
+    
+    it('should add new item to "item" property',()=>{
+      const testItem = "This is a test item";
+      component.addTodoToList(testItem);
+      expect(component.items.some((item) => item === testItem))
+      .toBe(true);
+    })
+  })
 });
+
+
+

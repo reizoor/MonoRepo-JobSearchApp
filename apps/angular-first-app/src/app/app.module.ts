@@ -21,7 +21,7 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     AboutUsComponent,
     ContactUsComponent,
-    HomeComponent,
+    HomeComponent
     
   ],
   imports: [BrowserModule, AppRoutingModule,FormsModule],

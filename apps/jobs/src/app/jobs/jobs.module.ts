@@ -1,11 +1,19 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { JobsDetailsComponent } from './jobs-details/jobs-details.component';
+
+import { JobsRoutingModule } from './jobs-routing.module';
 import { JobsListComponent } from './jobs-list/jobs-list.component';
+import { JobsDetailsComponent } from './jobs-details/jobs-details.component';
+
 
 @NgModule({
-  declarations: [JobsDetailsComponent, JobsListComponent],
-  imports: [CommonModule],
-  exports: [JobsDetailsComponent, JobsListComponent],
+  declarations: [
+    JobsListComponent,
+    JobsDetailsComponent
+  ],
+  imports: [
+    CommonModule,
+    JobsRoutingModule
+  ]
 })
-export class JobsModule {}
+export class JobsModule { }

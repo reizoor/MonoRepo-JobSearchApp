@@ -5,6 +5,9 @@
     "angular-first-app": "apps/angular-first-app",
     "angular-first-app-e2e": "apps/angular-first-app-e2e",
     "jobs": "apps/jobs",
-    "jobs-e2e": "apps/jobs-e2e"
+    "jobs-e2e": "apps/jobs-e2e",
+    "my-first-nest-app": "apps/my-first-nest-app",
+    "store-playground": "apps/store-playground",
+    "store-playground-e2e": "apps/store-playground-e2e"
   }
 }
