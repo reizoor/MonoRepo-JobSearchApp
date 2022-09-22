@@ -25,6 +25,6 @@ export class JobsDetailsComponent implements OnInit {
       switchMap((params: ParamMap) =>
         this.service.getJob(Number(params.get('id'))))
     );
-    
+    this.job$.subscribe();
   }
 }

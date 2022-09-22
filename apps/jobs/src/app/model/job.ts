@@ -3,6 +3,7 @@ export interface Job {
     title: string;
     company: string;
     location:string;
+    type: string;
     description:string;
 }
 
@@ -12,6 +13,7 @@ export const jobs: Job[] = [
         title: "Angular Junior Developer",
         company: "Prodapt",
         location: "Panama, Panama City (Remote)",
+        type: "Remote",
         description: 
         `Junior developer who knows: how to pass data from child to parent,
         from parent to child.
@@ -22,6 +24,7 @@ export const jobs: Job[] = [
         title: "Javascript Junior Developer",
         company: "Prodapt",
         location: "Panama, Panama City(Remote)",
+        type: "Remote",
         description:
         `Junior developer who know:
         -Declare variables
@@ -36,6 +39,7 @@ export const jobs: Job[] = [
         title: "IT Support Assistant",
         company: "Prodapt",
         location: "Panama, Panama City(Remote)",
+        type: "Remote",
         description:
         `Junior asistant that know this things:
         -MS Office
@@ -49,6 +53,7 @@ export const jobs: Job[] = [
         title: "C# ASP.Net Junior Developer",
         company: "Banco General",
         location: "Panama, Panama City (On site)",
+        type: "Remote",
         description:
         `Searching for junior dev who knows this things in C#:
         -Do a basic MVC app
@@ -61,6 +66,7 @@ export const jobs: Job[] = [
         title: "DevOps Engineer",
         company: "Copa Airlines",
         location: "Panama, Panama City, Tocumen (Remote)",
+        type: "Remote",
         description:
         ` Devops engineer who knows:
         -Docker
